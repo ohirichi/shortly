@@ -16,7 +16,7 @@ export default function Home(){
             <Navbar />
             <header>
                 <div className="hero-image-container">
-                    <img />
+                    <img src="/images/illustration-working.svg" />
                 </div>
                 <div className="headline">
                     <h1>More than just shorter links</h1>
