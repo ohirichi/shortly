@@ -1,7 +1,7 @@
 import {useState} from "react"
 
 export default function Button(props){
-    const {text, activeText, shape, size, primary} = props
+    const {text, activeText, shape, size, primary, onClick} = props
     const [clicked, setClicked] = useState(false)
 
     const handleClick = function(e){
@@ -10,7 +10,7 @@ export default function Button(props){
     }
 
     return(
-        <div>
+        <div onClick={onClick ? e => onClick(e) : null}>
             <button className={clicked ? "clicked" : ""} onClick={handleClick} onMouseOver={e => setClicked(false)}>{clicked && activeText ? activeText : text}</button>
             <style jsx>{`
                 button{
@@ -30,7 +30,7 @@ export default function Button(props){
 
                 button:focus {
                     outline:0;
-                    background:${clicked ? "hsl(257, 27%, 26%)": "hsl(180, 66%, 49%)"};
+                    ${clicked ? "background: hsl(257, 27%, 26%);": ""}
                     
                 }
                 .clicked{
