@@ -1,7 +1,7 @@
 import {useState} from "react"
 
 export default function Button(props){
-    const {text, activeText, shape, size, primary, onClick} = props
+    const {text, activeText, shape, size, primary, onClick, fullWidth, href} = props
     const [clicked, setClicked] = useState(false)
 
     const handleClick = function(e){
@@ -11,20 +11,22 @@ export default function Button(props){
 
     return(
         <div onClick={onClick ? e => onClick(e) : null}>
-            <button className={clicked ? "clicked" : ""} onClick={handleClick} onMouseOver={e => setClicked(false)}>{clicked && activeText ? activeText : text}</button>
+            {href ? <a href={href}>{text}</a>:
+            <button className={clicked ? "clicked" : ""} onClick={handleClick} onMouseOver={e => setClicked(false)}>{clicked && activeText ? activeText : text}</button>}
             <style jsx>{`
-                button{
+                a, button{
                     font-family: 'Poppins', sans-serif;
-                    margin: .5rem;
+                    ${fullWidth ? "width:100%;" : ""}
                     color:white;
                     border:none;
                     padding: ${size === "sm" ? ".5rem 1.5rem" :".8rem 2.5rem"};
                     font-weight:${primary ? 700: 500};
                     background:hsl(180, 66%, 49%);
                     border-radius:${shape === "square" ? "3px" : "25px"};
+                    
                 }
 
-                button:hover{
+                a:hover, button:hover{
                     background:hsl(180, 59%, 75%);
                 }
 
@@ -35,6 +37,10 @@ export default function Button(props){
                 }
                 .clicked{
                     background:hsl(257, 27%, 26%);
+                }
+                a{
+                    text-decoration:none;
+                    color:white;
                 }
             
             `}
