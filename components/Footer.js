@@ -1,7 +1,6 @@
 import React from "react"
 
 export default function Footer(props){
-    console.log("hi")
 
     return(
         <div className="container">
@@ -51,7 +50,7 @@ export default function Footer(props){
             <style jsx>{`
                 footer{
                     max-width:100%;
-                    background-color:black;
+                    background-color:hsl(260, 8%, 14%);
                     color:white;
                     display:flex;
                     flex-direction: column;

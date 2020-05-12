@@ -2,6 +2,7 @@ import Head from "next/head"
 import Button from "../components/Button"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import Info from "../components/Info"
 
 
 export default function Home(){
@@ -26,6 +27,9 @@ export default function Home(){
                     <Button text="Get Started" />
                 </div>
             </header>
+            <Info />
+
+            
             <section></section>
             <section></section>
             <section className="boost">
