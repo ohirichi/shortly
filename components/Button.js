@@ -19,11 +19,11 @@ export default function Button(props){
                     ${fullWidth ? "width:100%;" : ""}
                     color:white;
                     border:none;
-                    padding: ${size === "sm" ? ".5rem 1.5rem" :".8rem 2.5rem"};
+                    padding: ${size === "sm" ? ".3rem 1.1rem" :".5rem 2rem"};
                     font-weight:${primary ? 700: 500};
                     background:hsl(180, 66%, 49%);
                     border-radius:${shape === "square" ? "3px" : "25px"};
-                    
+                    font-size: .8rem;
                 }
 
                 a:hover, button:hover{

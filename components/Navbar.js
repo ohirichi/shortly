@@ -40,6 +40,7 @@ export default function Navbar(props){
                     "logo main";
                     align-items:center;
                     position:relative;
+                    padding-top:1em;
                     
                 }
                 .logo{
@@ -59,6 +60,8 @@ export default function Navbar(props){
                 }
                 .nav-links{
                     position:absolute;
+                    z-index:1000;
+                    margin-top:1.5rem;
                     width:100%;
                     top:20px;
                     transform: scaleY(0);
@@ -75,7 +78,8 @@ export default function Navbar(props){
                     flex-direction:column;
                     text-align:center;
                     font-weight: 700;
-                    font-size:15px;
+                    font-size:1rem;
+                    
                     
                 }
 
@@ -84,7 +88,7 @@ export default function Navbar(props){
                 }
 
                 ul li {
-                    margin: 1rem;
+                    margin: 1.5rem 1rem;
                 }
                 a {
                     color:white;
@@ -96,6 +100,7 @@ export default function Navbar(props){
                         display: none;
                     }
                     .nav-links {
+                        margin:0;
                         position:static;
                         grid-area:main;
                         transform:scaleY(1);
@@ -106,6 +111,8 @@ export default function Navbar(props){
                         justify-content:space-between;
                         padding: 0;
                         margin-left:10px;
+                        font-size:.8rem;
+                        
                         
                     }
                     ul div {
@@ -124,7 +131,7 @@ export default function Navbar(props){
 
                 @media only screen and (min-width: 1200px){
                     nav{
-                        padding: 0 4em;
+                        padding: 2em 4em;
                     }
                 }
             `}
