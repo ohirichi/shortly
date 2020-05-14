@@ -27,7 +27,7 @@ export default function Info(props){
             </div>
             <style jsx>{`
                 .container{
-                    background-color: hsl(257, 7%, 63%);
+                    background-color: hsl(225, 33%, 95%);
                     display:flex;
                     flex-direction:column;
                     justify-content:center;
@@ -73,7 +73,7 @@ export default function Info(props){
                     margin-bottom: 1em;
                 }
 
-                @media only screen and (min-width: 1000px){
+                @media only screen and (min-width: 1200px){
                     .card-container{
                         flex-direction: row;
                         padding-bottom: 3em;

@@ -27,10 +27,7 @@ export default function Button(props){
                     text-align:center;
                 }
 
-                a:hover, button:hover{
-                    background:hsl(180, 59%, 75%);
-                }
-
+                
                 button:focus {
                     outline:0;
                     ${clicked && !disableActiveState ? "background: hsl(257, 27%, 26%);": ""}
@@ -39,10 +36,21 @@ export default function Button(props){
                 .clicked{
                     background:hsl(257, 27%, 26%);
                 }
+
+                
                 a{
                     text-decoration:none;
                     color:white;
                 }
+
+                a:hover, button:hover{
+                    background:hsl(180, 59%, 75%);
+                }
+
+                a:hover.clicked, button:hover.clicked {
+                    background:hsl(257, 27%, 26%);
+                }
+
             
             `}
 

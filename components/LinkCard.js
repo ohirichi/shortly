@@ -14,7 +14,7 @@ export default function LinkCard(props){
     return(
         <div>
             <div className="card">
-                <p className="initial">{initial}</p>
+                <p className="initial" title={initial}>{initial.substring(0,25)+"..."}</p>
                 <div>
                     <input className="result" ref={textEl} readOnly value={result}/>
                     <div className="button-container">

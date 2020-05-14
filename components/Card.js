@@ -59,7 +59,7 @@ export default function Card (props){
                 }
             }
 
-            @media only screen and (min-width:1000px){
+            @media only screen and (min-width:1200px){
                 .badge{
                     left: 10%;
                 }

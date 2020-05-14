@@ -7,10 +7,7 @@ import Shortener from "../components/Shortener"
 
 
 export default function Home(){
-    const handleClick = e => {
-        e.preventDefault()
-        console.log("clicked")
-    }
+
     return(
         <div>
             <Head>
@@ -28,15 +25,8 @@ export default function Home(){
                     <Button text="Get Started" />
                 </div>
             </header>
-            <div className="shortener-container">
-                <Shortener />
-            </div>
-            
+            <Shortener />
             <Info />
-
-            
-            <section></section>
-            <section></section>
             <section className="boost">
                 <h2>Boost your links today</h2>
                 <Button text="Get Started" />
@@ -58,6 +48,8 @@ export default function Home(){
                     display:flex;
                     flex-direction:column;
                     overflow:hidden;
+                    align-items:center;
+                    justify-content:center;
                     margin-bottom:2em;
                 }
 
@@ -73,25 +65,22 @@ export default function Home(){
                 }
 
                 .headline {
+                    box-sizing:border-box;
                     max-width:90%;
                     display:flex;
                     flex-direction: column;
                     text-align:center;
                     padding:1.5em;
+                    padding-left:0;
                 }
 
                 p {
-                    color: hsl(0, 0%, 75%);
+                    color: hsl(257, 7%, 63%);
                 }
                 
                 .headline p {
                     margin: 1em 0;
                     margin-bottom: 2em;
-                }
-
-                .shortener-container{
-                    padding: 1em;
-                    background-image:linear-gradient(white 45%, hsl(0, 0%, 75%) 45%);
                 }
 
                 .boost {
@@ -111,9 +100,10 @@ export default function Home(){
                     margin-bottom: .5rem;
                 }
 
-                @media only screen and (min-width:650px){
+                @media only screen and (min-width:700px){
                     header{
                         flex-direction:row;
+                        padding-left:4em;
                         
                     }
                     h1 {
@@ -145,7 +135,7 @@ export default function Home(){
 
                 @media only screen and (min-width: 1200px){
                     html {
-                        font-size: 25px;
+                        font-size: 20px;
                     }
                     header{
                         padding-left:4em;

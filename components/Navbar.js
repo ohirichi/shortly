@@ -41,6 +41,7 @@ export default function Navbar(props){
                     align-items:center;
                     position:relative;
                     padding-top:1em;
+                    padding: 1em;
                     
                 }
                 .logo{
@@ -88,14 +89,23 @@ export default function Navbar(props){
                 }
 
                 ul li {
-                    margin: 1.5rem 1rem;
+                    margin: 2em .5em;
                 }
                 a {
                     color:white;
                     text-decoration:none;
                 }
-                @media only screen and (min-width: 650px){
-                    
+
+                a:hover{
+                    color: black;
+                }
+                @media only screen and (min-width: 700px){
+                    nav{
+                        padding: 2em;
+                        
+                        
+                    }
+
                     .burger {
                         display: none;
                     }
