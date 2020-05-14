@@ -1,18 +1,18 @@
 import {useState} from "react"
 
 export default function Button(props){
-    const {text, activeText, shape, size, primary, onClick, fullWidth, href} = props
+    const {text, disableActiveState, activeText, shape, size, primary, onClick, fullWidth, href} = props
     const [clicked, setClicked] = useState(false)
 
     const handleClick = function(e){
         e.preventDefault()
         setClicked(true)
     }
-
+    
     return(
         <div onClick={onClick ? e => onClick(e) : null}>
             {href ? <a href={href}>{text}</a>:
-            <button className={clicked ? "clicked" : ""} onClick={handleClick} onMouseOver={e => setClicked(false)}>{clicked && activeText ? activeText : text}</button>}
+            <button className={clicked && !disableActiveState ? "clicked" : ""} onClick={handleClick} onMouseOver={e => setClicked(false)}>{clicked && activeText ? activeText : text}</button>}
             <style jsx>{`
                 a, button{
                     font-family: 'Poppins', sans-serif;
@@ -24,6 +24,7 @@ export default function Button(props){
                     background:hsl(180, 66%, 49%);
                     border-radius:${shape === "square" ? "3px" : "25px"};
                     font-size: .8rem;
+                    text-align:center;
                 }
 
                 a:hover, button:hover{
@@ -32,7 +33,7 @@ export default function Button(props){
 
                 button:focus {
                     outline:0;
-                    ${clicked ? "background: hsl(257, 27%, 26%);": ""}
+                    ${clicked && !disableActiveState ? "background: hsl(257, 27%, 26%);": ""}
                     
                 }
                 .clicked{

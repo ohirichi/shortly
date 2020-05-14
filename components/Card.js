@@ -25,13 +25,14 @@ export default function Card (props){
                 justify-content:center;
                 align-items:space-between;
                 padding: 1em;
-                padding-bottom:2em;
+                padding-bottom:1.5em;
+                z-index:10;
             }
 
             p {
                 color:hsl(0, 0%, 75%);
                 height:40%;
-                font-size:1rem;
+                font-size:.9rem;
             }
 
              h3 {
@@ -61,6 +62,16 @@ export default function Card (props){
             @media only screen and (min-width:1000px){
                 .badge{
                     left: 10%;
+                }
+
+                .card{
+                    max-width: 350px;
+                }
+            }
+
+            @media only screen and (min-width:1200px){
+                p{
+                    font-size:.8rem;
                 }
             }
         `}</style>

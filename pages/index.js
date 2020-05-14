@@ -3,6 +3,7 @@ import Button from "../components/Button"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Info from "../components/Info"
+import Shortener from "../components/Shortener"
 
 
 export default function Home(){
@@ -27,6 +28,10 @@ export default function Home(){
                     <Button text="Get Started" />
                 </div>
             </header>
+            <div className="shortener-container">
+                <Shortener />
+            </div>
+            
             <Info />
 
             
@@ -75,10 +80,18 @@ export default function Home(){
                     padding:1.5em;
                 }
 
+                p {
+                    color: hsl(0, 0%, 75%);
+                }
+                
                 .headline p {
-                    color:hsl(0, 0%, 75%);
                     margin: 1em 0;
                     margin-bottom: 2em;
+                }
+
+                .shortener-container{
+                    padding: 1em;
+                    background-image:linear-gradient(white 45%, hsl(0, 0%, 75%) 45%);
                 }
 
                 .boost {

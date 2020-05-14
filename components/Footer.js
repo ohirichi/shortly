@@ -66,6 +66,7 @@ export default function Footer(props){
                     flex-direction:row;
                     justify-content:center;
                     width:25%;
+                    min-width:121px;
                 }
                 .sitemap {
                     text-align:center;
