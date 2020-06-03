@@ -69,7 +69,7 @@ export default function Footer(props){
             </div>
             <style jsx>{`
                 .attribution {
-                    width:100vw;
+                    width:100%;
                     background-color: hsl(260, 8%, 14%);
                     text-align:center;
                     color:white;
